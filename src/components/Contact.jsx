@@ -24,7 +24,7 @@ export default function Contact() {
                         </div>
                         <div className="contact-item">
                             <FiMail />
-                            <a href="mailto:info@leonardodesign.it">info@leonardodesign.it</a>
+                            <a href="mailto:Infoleonardodesign@gmail.com">Infoleonardodesign@gmail.com</a>
                         </div>
                     </div>
                 </div>
