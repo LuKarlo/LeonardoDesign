@@ -1,31 +1,31 @@
 const projects = [
     {
         title: "Parcheggi",
-        tag: "Segnaletica",
+        tag: "Insegne",
         description: "Diamo al tuo parcheggio ottima visibilità.",
         image: "ParkingSmeraldo.jpg",
     },
     {
         title: "The Roll Station",
-        tag: "Food",
+        tag: "Lavorazioni",
         description: "Insegna luminosa per street food dal forte impatto visivo.",
         image: "sito e carrello.jpg",
     },
     {
         title: "Lavori a neon",
-        tag: "Food",
+        tag: "Neon",
         description: "Dai quel ritocco per rendere più accogliente il tuo locale.",
         image: "utilizzaree per sito 7.jpg",
     },
     {
         title: "Insegne su misura",
-        tag: "Ristorazione",
+        tag: "Insegne",
         description: "Progetto su misura per valorizzare l'identità del locale.",
         image: "casa 20 specialita pugliesi.jpg",
     },
     {
         title: "Belle-Poke",
-        tag: "Food",
+        tag: "Pellicola",
         description: "Insegna personalizzata per valorizzare il locale.",
         image: "belle poke.jpg",
     },
