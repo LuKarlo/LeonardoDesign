@@ -4,7 +4,7 @@ name: Deploy Vite Site
 on:
   # Avvia il processo ogni volta che fai un push sul ramo "main"
   push:
-    branches: ["main"]
+    branches: ["master"]
 
   # Ti permette di avviarlo manualmente dalla scheda Actions
   workflow_dispatch:
