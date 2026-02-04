@@ -8,7 +8,7 @@ export default function NavBar(){
             <nav>
                 
                 <div className="logo">
-                    <img src="logo.webp" alt="" />
+                    <img src="logo.webp" alt="Leonardo Design" />
                 </div>
                 <div className="links">
                     <ul>

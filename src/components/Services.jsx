@@ -1,15 +1,23 @@
 const services = [
     {
         title: "Insegne luminose",
-        description: "Progettiamo e realizziamo insegne LED ad alta visibilit\u00e0 per interni ed esterni.",
+        description: "Insegne LED e insegne a neon progettate per massima visibilit\u00e0 di giorno e di notte.",
     },
     {
-        title: "Allestimenti retail",
-        description: "Vetrine, totem e pannelli coordinati per valorizzare ogni punto vendita.",
+        title: "Lettere scatolate",
+        description: "Soluzioni personalizzate in diversi materiali e finiture, con illuminazione LED o neon.",
     },
     {
-        title: "Wrapping e vetrofanie",
-        description: "Pellicole tecniche, grafiche su misura e installazione professionale.",
+        title: "Grafica e stampa",
+        description: "Grafica pubblicitaria, stampa digitale e biglietti da visita curati in ogni dettaglio.",
+    },
+    {
+        title: "Segnaletica parcheggi",
+        description: "Insegne \"P\" a ore chiare e resistenti, progettate per durare nel tempo.",
+    },
+    {
+        title: "Inferiate in ferro",
+        description: "Strutture robuste e su misura che uniscono sicurezza e design.",
     },
 ];
 
@@ -17,11 +25,12 @@ export default function Services() {
     return (
         <section className="services" id="servizi">
             <div className="section-heading">
-                <span className="eyebrow">I nostri servizi</span>
-                <h2>Soluzioni creative per ogni esigenza visiva</h2>
+                <span className="eyebrow">Produzione</span>
+                <h2>Dall'idea alla produzione finale</h2>
                 <p>
-                    Dalla consulenza al montaggio, seguiamo ogni fase per dare
-                    coerenza e forza alla tua identit\u00e0.
+                    Progettiamo e realizziamo insegne luminose, lettere scatolate, grafica pubblicitaria e stampa
+                    digitale, seguendo ogni fase del lavoro con cura artigianale: ascolto e consulenza, progettazione
+                    grafica, scelta dei materiali, controllo qualità e installazione.
                 </p>
             </div>
             <div className="services-grid">

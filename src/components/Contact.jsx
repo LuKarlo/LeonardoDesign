@@ -1,3 +1,6 @@
+import { FiPhone, FiMail } from "react-icons/fi";
+import { FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa";
+
 export default function Contact() {
     return (
         <section className="contact" id="contatti">
@@ -11,34 +14,32 @@ export default function Contact() {
             </div>
             <div className="contact-grid">
                 <div className="contact-details">
-                    <div>
-                        <span className="label">Sede</span>
-                        <p>Via delle Insegne 12, 20100 Milano</p>
+                    <div className="contact-list">
+                        <div className="contact-item">
+                            <FiPhone />
+                            <a href="tel:3515374018">351-537-4018</a>
+                        </div>
+                        <div className="contact-item">
+                            <FiPhone />
+                            <a href="tel:3514559105">351-455-9105</a>
+                        </div>
+                        <div className="contact-item">
+                            <FiMail />
+                            <a href="mailto:info@leonardodesign.it">info@leonardodesign.it</a>
+                        </div>
                     </div>
-                    <div>
-                        <span className="label">Telefono</span>
-                        <p>+39 02 1234 5678</p>
-                    </div>
-                    <div>
-                        <span className="label">Email</span>
-                        <p>info@leonardodesign.it</p>
+                    <div className="contact-icons">
+                        <a href="#" aria-label="Instagram">
+                            <FaInstagram />
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <FaFacebookF />
+                        </a>
+                        <a href="#" aria-label="TikTok">
+                            <FaTiktok />
+                        </a>
                     </div>
                 </div>
-                <form className="contact-form">
-                    <label>
-                        Nome e cognome
-                        <input type="text" placeholder="Il tuo nome" />
-                    </label>
-                    <label>
-                        Email
-                        <input type="email" placeholder="nome@email.it" />
-                    </label>
-                    <label>
-                        Messaggio
-                        <textarea rows="4" placeholder="Come possiamo aiutarti?" />
-                    </label>
-                    <button type="button">Richiedi informazioni</button>
-                </form>
             </div>
         </section>
     );
