@@ -10,15 +10,7 @@ const services = [
     {
         title: "Grafica e stampa",
         description: "Grafica pubblicitaria, stampa digitale e biglietti da visita curati in ogni dettaglio.",
-    },
-    {
-        title: "Segnaletica parcheggi",
-        description: "Insegne \"P\" a ore chiare e resistenti, progettate per durare nel tempo.",
-    },
-    {
-        title: "Inferiate in ferro",
-        description: "Strutture robuste e su misura che uniscono sicurezza e design.",
-    },
+    }
 ];
 
 export default function Services() {
