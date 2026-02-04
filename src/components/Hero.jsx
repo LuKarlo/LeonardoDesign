@@ -1,3 +1,5 @@
+import { FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa";
+
 export default function Hero() {
     return (
         <>
@@ -28,19 +30,16 @@ export default function Hero() {
                             </a>
                         </div>
 
-                        <div className="hero-highlights">
-                            <div>
-                                <strong>Esperienza</strong>
-                                <span>più di mezzo secolo</span>
-                            </div>
-                            <div>
-                                <strong>Artigianalità + tecnologia</strong>
-                                <span>materiali di qualità e soluzioni moderne</span>
-                            </div>
-                            <div>
-                                <strong>Il tuo brand</strong>
-                                <span>la nostra esperienza</span>
-                            </div>
+                        <div className="hero-social">
+                            <a href="#" aria-label="Instagram">
+                                <FaInstagram />
+                            </a>
+                            <a href="#" aria-label="Facebook">
+                                <FaFacebookF />
+                            </a>
+                            <a href="#" aria-label="TikTok">
+                                <FaTiktok />
+                            </a>
                         </div>
                     </div>
 

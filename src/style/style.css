@@ -25,7 +25,7 @@
     linear-gradient(120deg, rgba(11, 15, 20, 0.95), rgba(11, 15, 20, 0.7));
 }
 
-:root[data-theme=dark] .hero-highlights div {
+:root[data-theme=dark] .hero-social a {
   background: rgba(15, 23, 42, 0.6);
   border-color: rgba(148, 163, 184, 0.2);
 }
@@ -118,6 +118,95 @@ header nav .ham svg {
 }
 header nav .ham svg:hover {
   color: var(--subtext);
+}
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 1.5rem 0 0.5rem;
+  flex: 0;
+}
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  margin: 6px 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 90;
+}
+.menu-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(320px, 85vw);
+  height: 100vh;
+  background: var(--bg-primary);
+  border-left: 1px solid var(--nav-bg-secondary);
+  box-shadow: -20px 0 50px rgba(15, 23, 42, 0.2);
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+  z-index: 100;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 1.5rem;
+  color: var(--text);
+}
+.sidebar.open {
+  transform: translateX(0%);
+}
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.close-btn {
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text);
+}
+.sidebar-footer svg {
+  width: 26px;
+  height: 26px;
+}
+.sidebar-links {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.sidebar-links a {
+  font-size: 1.1rem;
+  color: var(--text);
+}
+.sidebar-links a:hover {
+  color: var(--primary);
+}
+.sidebar-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--nav-bg-secondary);
+  padding-top: 1rem;
 }
 
 .accent {
@@ -233,27 +322,28 @@ li {
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
 }
 
-.hero-highlights {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
+.hero-social {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   padding-top: 1rem;
 }
-.hero-highlights div {
-  background: rgba(248, 250, 252, 0.7);
+.hero-social a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   border: 1px solid var(--nav-bg-secondary);
-  padding: 1rem 1.2rem;
-  border-radius: 16px;
-  display: grid;
-  gap: 0.35rem;
-}
-.hero-highlights div strong {
+  background: var(--bg-primary);
   color: var(--text);
-  font-size: 1.1rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.25rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
-.hero-highlights div span {
-  color: var(--subtext);
-  font-size: 0.95rem;
+.hero-social a:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 .hero-visual {
@@ -569,29 +659,6 @@ li {
   color: var(--text);
   font-weight: 600;
 }
-.contact-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-.contact-icons a {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  border: 1px solid var(--nav-bg-secondary);
-  background: var(--bg-primary);
-  color: var(--text);
-  display: grid;
-  place-items: center;
-  font-size: 1.35rem;
-  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-}
-.contact-icons a:hover {
-  transform: translateY(-2px);
-  border-color: var(--primary);
-  color: var(--primary);
-}
 
 .contact-form {
   display: grid;
@@ -630,11 +697,22 @@ li {
   .hero-visual {
     min-height: 360px;
   }
-  .hero-highlights {
-    grid-template-columns: 1fr;
+  .hero-social {
+    flex-wrap: wrap;
   }
   .about-grid {
     grid-template-columns: 1fr;
+  }
+  header nav .links {
+    display: none;
+  }
+  header nav .ham {
+    display: none;
+  }
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 

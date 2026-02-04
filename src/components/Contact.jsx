@@ -1,5 +1,4 @@
 import { FiPhone, FiMail } from "react-icons/fi";
-import { FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa";
 
 export default function Contact() {
     return (
@@ -27,17 +26,6 @@ export default function Contact() {
                             <FiMail />
                             <a href="mailto:info@leonardodesign.it">info@leonardodesign.it</a>
                         </div>
-                    </div>
-                    <div className="contact-icons">
-                        <a href="#" aria-label="Instagram">
-                            <FaInstagram />
-                        </a>
-                        <a href="#" aria-label="Facebook">
-                            <FaFacebookF />
-                        </a>
-                        <a href="#" aria-label="TikTok">
-                            <FaTiktok />
-                        </a>
                     </div>
                 </div>
             </div>
