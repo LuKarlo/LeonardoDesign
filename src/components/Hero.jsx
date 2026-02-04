@@ -31,13 +31,13 @@ export default function Hero() {
                         </div>
 
                         <div className="hero-social">
-                            <a href="#" aria-label="Instagram">
+                            <a className="social instagram" href="#" aria-label="Instagram">
                                 <FaInstagram />
                             </a>
-                            <a href="#" aria-label="Facebook">
+                            <a className="social facebook" href="#" aria-label="Facebook">
                                 <FaFacebookF />
                             </a>
-                            <a href="#" aria-label="TikTok">
+                            <a className="social tiktok" href="#" aria-label="TikTok">
                                 <FaTiktok />
                             </a>
                         </div>

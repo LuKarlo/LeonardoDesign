@@ -1,8 +1,8 @@
 const projects = [
     {
-        title: "Parking Smeraldo",
+        title: "Parcheggi",
         tag: "Segnaletica",
-        description: "Insegna \"P\" a ore con ingresso ben visibile e resistente.",
+        description: "Diamo al tuo parcheggio ottima visibilità.",
         image: "ParkingSmeraldo.jpg",
     },
     {
@@ -12,13 +12,13 @@ const projects = [
         image: "sito e carrello.jpg",
     },
     {
-        title: "Pizza Lovers",
+        title: "Lavori a neon",
         tag: "Food",
-        description: "Comunicazione visiva chiara e riconoscibile per il punto vendita.",
+        description: "Dai quel ritocco per rendere più accogliente il tuo locale.",
         image: "utilizzaree per sito 7.jpg",
     },
     {
-        title: "Casa 20 Specialita Pugliesi",
+        title: "Insegne su misura",
         tag: "Ristorazione",
         description: "Progetto su misura per valorizzare l'identità del locale.",
         image: "casa 20 specialita pugliesi.jpg",
