@@ -13,19 +13,19 @@ export default function NavBar(){
                 <div className="links">
                     <ul>
                         <li>
-                            <a href="#">Home</a>
+                            <a href="#home">Home</a>
                         </li>
                         <li>
-                            <a href="#">Chi siamo</a>
+                            <a href="#chi-siamo">Chi siamo</a>
                         </li>
                         <li>
-                            <a href="#">Produzione</a>
+                            <a href="#servizi">Produzione</a>
                         </li>
                         <li>
-                            <a href="#">Progetti</a>
+                            <a href="#progetti">Progetti</a>
                         </li>
                         <li>
-                            <a href="#" className="accent">Contatti</a>
+                            <a href="#contatti" className="accent">Contatti</a>
                         </li>
                     </ul>
                 </div>
