@@ -37,7 +37,7 @@ export default function Hero() {
                             <a className="social facebook" href="https://www.facebook.com/share/1HDDGewe8h/?mibextid=wwXIfr" aria-label="Facebook">
                                 <FaFacebookF />
                             </a>
-                            <a className="social tiktok" href="www.tiktok.com/@insegnedesign" aria-label="TikTok">
+                            <a className="social tiktok" href="https://www.tiktok.com/@insegnedesign" aria-label="TikTok">
                                 <FaTiktok />
                             </a>
                         </div>
