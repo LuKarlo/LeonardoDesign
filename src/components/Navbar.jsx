@@ -1,11 +1,36 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ToggleMode from "./ToggleBTN";
 
 
 export default function NavBar(){
     const [menuOpen, setMenuOpen] = useState(false);
+    const [projectCategories, setProjectCategories] = useState([]);
 
     const closeMenu = () => setMenuOpen(false);
+    const getCategoryId = (categoryName) =>
+        `categoria-${categoryName.toLowerCase().replace(/\s+/g, "-")}`;
+    const openProjectCategory = (categoryName) => {
+        window.dispatchEvent(
+            new CustomEvent("expand-project-category", {
+                detail: { categoryName },
+            })
+        );
+        closeMenu();
+    };
+
+    useEffect(() => {
+        const frame = requestAnimationFrame(() => {
+            const categories = Array.from(
+                document.querySelectorAll("[data-project-category]")
+            ).map((category) => category.dataset.projectCategory);
+
+            setProjectCategories(categories);
+        });
+
+        return () => {
+            cancelAnimationFrame(frame);
+        };
+    }, []);
 
     return (
         <header>
@@ -63,6 +88,17 @@ export default function NavBar(){
                     <a href="#chi-siamo" onClick={closeMenu}>Chi siamo</a>
                     <a href="#servizi" onClick={closeMenu}>Produzione</a>
                     <a href="#progetti" onClick={closeMenu}>Progetti</a>
+                    <div className="sidebar-category-links" aria-label="Categorie progetti">
+                        {projectCategories.map((categoryName) => (
+                            <a
+                                href={`#${getCategoryId(categoryName)}`}
+                                key={categoryName}
+                                onClick={() => openProjectCategory(categoryName)}
+                            >
+                                {categoryName}
+                            </a>
+                        ))}
+                    </div>
                     <a href="#contatti" onClick={closeMenu}>Contatti</a>
                 </div>
                 <div className="sidebar-footer">
